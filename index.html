@@ -1,0 +1,351 @@
+<!--Starting from the link tag up to the p tag we are making our introduction area  -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<link rel="stylesheet" href="maincss.css">
+<!--link rel="stylesheet" type="text/css" href="https://legoman8304.github.io/style.css"-->
+<title style="color:aliceblue">Michael HB Future Engineer</title>
+<h1 style="color:aliceblue">Michael HB   </h1>
+<h1 style="color:aliceblue"> Data Engineer Project</h1>
+<br><p id='introcomment' style="color:black" >Welcome to my Data Engineer project .I built this entire app with <br> Linux , Python , Node JS, 
+& miscellaneous coding languages.<br>The Coding Explained page has technical information & a video of how this app was created.</p>
+
+
+<!--At this point we are creating her 1st of 2 tab sections-->
+<!--We want to give the user the option to search based off the list of sites we provide
+And we want to allow for the user to click a tab and go to another window to see the promo information-->
+<div class="row">
+  <div class="left" style="background-color:#bbb;" >
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search" title="Type in a category">
+    <!--List the sites we want to use -->
+	<!--These links will open in a new window-->
+	 <ul id="myMenu">
+      <li><a href="Amazon.html">Amazon</a></li>
+      <li><a href="Crunchyroll.html">Crunchyroll</a></li>
+      <li><a href="CVS.html">CVS</a></li>
+      <li><a href="Doordash.html">Doordash</a></li>
+      <li><a href="Instacart.html">Instacart</a></li>
+      <li><a href="Sephora.html">Sephora</a></li>
+      <li><a href="Target.html">Target</a></li>
+      <li><a href="Temu.html">Temu</a></li>
+      <li><a href="Ulta.html">Ulta</a></li>
+	  <li><a href="Walgreens.html">Walgreens</a></li>
+		<li><a href="Walmart.html">Walmart</a></li>
+		<li><a href="Whataburger.html">Whataburger</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;" >
+    <h2>Introductions / Intructions</h2>
+    <p>Presenting my interactive portfolio project.  </p>
+    <p></p>
+    <p><br><br>On this page you can find REAL promo codes <br>that can be used for online shopping.</p>
+	  <p><br> </p>
+    <p><br><br>To the left, type in the search bar under Menu to filter thru the websites in realtime. <br> 
+		Or select the company in the list for the promo codes you wish to try out.</p>
+	  <p><br></p>
+	<p> <br>Another option, you can scroll down & use the tabs below to view the <br> promo codes on this webpage. </p>
+	  <p><br><br>Please note for some sites you may have to sign into your personal account</p>
+	  <p><br> ULTA & INSTACART & WALGREENS require no sign in to test promo codes </p>
+	  <p> <br> <br> <br> <br>THANK YOU 4 YOUR TIME , ENJOY ! </p>
+	<p><br>Lastly you can reach me on LinkedIN at <a id="linka" href="https://www.linkedin.com/in/michaelharrisbba" target="_blank">Michael HB</a> </p>
+		
+
+  </div>
+</div>
+<!--We write the logic for the search bar to look at the tab list we created-->
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+<!--Format the vertical tab section above within the html-->
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 20%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 55%;
+  padding: 10px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+	linka:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+linka:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+linka:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+
+
+
+
+
+
+
+<body>
+<br><br>	
+
+<!--Create the Horizontal tab section -->	
+	
+<body>
+
+<h2></h2>
+<p>Click on the X button in the top right corner to close the current horizontal_tab:</p>
+
+<div class="horizontal_tab">
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Data')" id="defaultOpen">Data Possibilities</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Amazon')">Amazon</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Crunchyroll')">Crunchyroll</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'CVS')">CVS</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Doordash')">Doordash</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Instacart')">Instacart</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Sephora')">Sephora</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Target')">Target</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Temu')">Temu</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Ulta')">Ulta</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Walgreens')">Walgreens</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Walmart')">Walmart</button>
+  <button class="horizontal_tablinks" onclick="openCity(event, 'Whataburger')">Whataburger</button>
+</div>
+
+<!--Format each horizontal tab -->	
+<!--On the 1st one we format the default tab that automatically opens when the user checks out the site-->
+<div id="Data" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>What can we use this data for?</h3>
+	<p> 1. Savings </p>  
+    <p><br></p>
+	<p> 2. We can analyze customer behavior and preferences based on the data collected.<br></p>
+	<p><br></p>
+    <p> 3. Find possible vendors to collaborate with for better deals and promotions.<br></p>
+    <p><br></p>
+	<p> 4. Discover missing trends and opportunities in the market based on user data.<br></p>
+	<p><br></p>
+	<p> ETC ETC ENDLESS POSSIBILITIES WITH DATA <br></p>
+</div>	
+	
+<div id="Amazon" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Amazon</h3>
+   <iframe id='amazon' class='amazon' src="Amazon.html" width=600 height=300 frameborder=0></iframe>
+</div>
+
+<div id="Crunchyroll" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Crunchyroll</h3>
+   <iframe id='amazon' class='amazon' src="Crunchyroll.html" width=600 height=300 frameborder=0></iframe>
+</div>
+	
+<div id="CVS" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>CVS</h3>
+   <iframe id='CVS' class='CVS' src="CVS.html" width=600 height=300 frameborder=0></iframe>
+</div>
+
+<div id="Doordash" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Doordash</h3>
+   <iframe id='Doordash' class='Doordash' src="Doordash.html" width=600 height=300 frameborder=0></iframe>
+</div>	
+	
+
+<div id="Instacart" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Instacart</h3>
+   <iframe id='Instacart' class='Instacart' src="Instacart.html" width=600 height=300 frameborder=0></iframe>
+</div>	
+	
+<div id="Sephora" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Sephora</h3>
+   <iframe id='Sephora' class='Sephora' src="Sephora.html" width=600 height=300 frameborder=0></iframe>
+</div>	
+	
+<div id="Target" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Target</h3>
+   <iframe id='Target' class='Target' src="Target.html" width=600 height=300 frameborder=0></iframe>
+</div>	
+	
+<div id="Temu" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Temu</h3>
+   <iframe id='Temu' class='Temu' src="Temu.html" width=600 height=300 frameborder=0></iframe>
+</div>	
+	
+<div id="Ulta" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Ulta</h3>
+   <iframe id='Ulta' class='Ulta' src="Ulta.html" width=600 height=300 frameborder=0></iframe>
+</div>	
+	
+<div id="Walgreens" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Walgreens</h3>
+   <iframe id='Walgreens' class='Walgreens' src="Walgreens.html" width=600 height=300 frameborder=0></iframe>
+</div>	
+	
+<div id="Walmart" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Walmart</h3>
+   <iframe id='Walmart' class='Walmart' src="Walmart.html" width=600 height=300 frameborder=0></iframe>
+</div>	
+	
+<div id="Whataburger" class="horizontal_tabcontent" style="background-color:#ddd;">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Whataburger</h3>
+   <iframe id='Whataburger' class='Whataburger' src="Whataburger.html" width=600 height=300 frameborder=0></iframe>
+</div>	
+
+<!--Create our 2nd script for the horizontal tab section-->
+
+<script>
+function openCity(evt, cityName) {
+  var i, horizontal_tabcontent, horizontal_tablinks;
+  horizontal_tabcontent = document.getElementsByClassName("horizontal_tabcontent");
+  for (i = 0; i < horizontal_tabcontent.length; i++) {
+    horizontal_tabcontent[i].style.display = "none";
+  }
+  horizontal_tablinks = document.getElementsByClassName("horizontal_tablinks");
+  for (i = 0; i < horizontal_tablinks.length; i++) {
+    horizontal_tablinks[i].className = horizontal_tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+
+<style>
+/* Style the horizontal_tab */
+.horizontal_tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the horizontal_tab */
+.horizontal_tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.horizontal_tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current horizontal_tablink class */
+.horizontal_tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the horizontal_tab content */
+.horizontal_tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  color:red;
+  font-size: 75px;
+}
+
+.topright:hover {color: red;}
+</style>
+
+  <br><br><br><br>
+		  <div id='walkthru' style="position:relative; width:100%; height:0px; padding-bottom:50%"><iframe allow="fullscreen;autoplay" 
+	allowfullscreen height="50%" src="https://streamable.com/e/nu8dr1?autoplay=1" width="70%" style=" border:45px solid coral; width:70%; height:75%; position:absolute; left:375px;
+	; top:0px; overflow:hidden;"></iframe></div>
+
+<br><br><br><br><br><br><br>	
+</body>
+<br><br>
+<!--Create the navigation bar that allows the user to go between pages-->
+<div class="navbar">
+   <a src='https://datguytechno.github.io/Website/' href="https://datguytechno.github.io/Website/" class="active">Promo Codes</a>
+  <a src='https://datguytechno.github.io/Website/coding' href="https://datguytechno.github.io/Website/coding">Coding Explained</a>
+  <a src='https://datguytechno.github.io/Passive_Income_Calculator/' href="https://datguytechno.github.io/Passive_Income_Calculator/" class="new">2021 Project</a>
+  </div>
